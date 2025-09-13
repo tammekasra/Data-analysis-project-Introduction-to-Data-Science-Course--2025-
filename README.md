@@ -31,4 +31,11 @@ Self-esteem (0.76) - Better self-esteem -> less stress
 Sleep quality (0.78) - Low stress -> Better Sleep or vice verca
 Academic performance (0.72) - Either poor academic performance causes stress or other way around
 
+## Grouping data to - highly stressed and low stressed
+
+Since we previously saw which features highly and lowly correlate with overall-stress - it can be also plausible to divide stress groups into two. Below the median is low stressed and up-ward median is highly 
+stressed. We can see then which features actually influence stress.
+
 ![Divide Stress Groups into two and correlate with the previous higher correlations!](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Average_Factor_Levels_By_Stress_Group.png)
+
+Here we can already clearly see that sel-esteem is the attribute that influences stress marginally compare to others attributes. 
