@@ -19,3 +19,14 @@ Heatmap is a useful tool in assessing correlations across all attributes within 
 
 ![Heatmap Visualization](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Heat_matp_visualization.png)
 
+From the heatmap we can clearly see that -
+
+Stress correlates strongly with:
+Future career concerns are the #2 stress driver (0.74)
+Academic performance is the #3 protective factor (0.72)
+Study load has moderate impact (0.63) - Manageable but significant
+
+Stress negatively correlates with:
+Self-esteem (0.76) - Better self-esteem -> less stress
+Sleep quality (0.78) - Low stress -> Better Sleep or vice verca
+Academic performance (0.72) - Either poor academic performance causes stress or other way around
