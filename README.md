@@ -1,6 +1,9 @@
 # Data-analysis-project-Introduction-to-Data-Science-Course--2025-
 The idea behind the project is to explore possible available tools to measure and analize data associated with student overall mental health.
 
+The data was taken from the following link that is is been data privacy proven and validated -
+https://www.kaggle.com/datasets/mdsultanulislamovi/student-stress-monitoring-datasets  
+
 
 
 ## Heatmap Visualization
