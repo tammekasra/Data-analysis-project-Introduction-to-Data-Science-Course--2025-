@@ -1,67 +1,36 @@
+
+
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
+import seaborn as sns
 
-# Load datasets
-stress_df = pd.read_csv("Stress_Dataset.csv")
-mental_df = pd.read_csv("StressLevelDataset.csv")
 
-# Select numeric / Likert-scale columns for heatmap
+'''
+This loads our data as csv from our repository
+'''
+stress_df = pd.read_csv('Stress_Dataset.csv')
+stress_level_df = pd.read_csv('StressLevelDataset.csv')
 
-# Dataset 1: Stress_Dataset
-stress_cols = [
-    'Age',
-    'Have you recently experienced stress in your life?',
-    'Have you noticed a rapid heartbeat or palpitations?',
-    'Have you been dealing with anxiety or tension recently?',
-    'Do you face any sleep problems or difficulties falling asleep?',
-    'Have you been getting headaches more often than usual?',
-    'Do you get irritated easily?',
-    'Do you have trouble concentrating on your academic tasks?',
-    'Have you been feeling sadness or low mood?',
-    'Do you often feel lonely or isolated?',
-    'Do you feel overwhelmed with your academic workload?',
-    'Do you lack confidence in your academic performance?',
-    'Do you lack confidence in your choice of academic subjects?'
-]
 
-stress_numeric = stress_df[stress_cols]
 
-# Dataset 2: StressLevelDataset
-mental_cols = [
-    'anxiety_level',
-    'self_esteem',
-    'mental_health_history',
-    'depression',
-    'headache',
-    'blood_pressure',
-    'sleep_quality',
-    'breathing_problem',
-    'noise_level',
-    'living_conditions',
-    'safety',
-    'basic_needs',
-    'academic_performance',
-    'study_load',
-    'teacher_student_relationship',
-    'future_career_concerns',
-    'social_support',
-    'peer_pressure',
-    'extracurricular_activities',
-    'bullying',
-    'stress_level'
-]
+'''
+This just does the StressLevelDataset.csv
 
-mental_numeric = mental_df[mental_cols]
+'''
 
-# Combine datasets if needed (optional)
-combined_df = pd.concat([stress_numeric, mental_numeric], axis=1)
 
-# Compute correlation matrix
-corr_matrix = combined_df.corr()
+plt.figure(figsize=(12, 8))
+sns.heatmap(stress_level_df.corr(), annot=True, fmt='.2f', cmap='coolwarm')
+plt.title('Heatmap - StressLevelDataset.csv')
+plt.tight_layout()
+plt.show()
 
-# Plot heatmap
-plt.figure(figsize=(15,12))
-sns.heatmap(corr_matrix, annot=True, fmt=".2f", cmap="coolwarm", cbar=True)
-plt.title("Correlation Heatmap of Stress and Mental Health Variables")
+
+'''
+This is for the Stress_DataSet.csv
+'''
+plt.figure(figsize=(12, 8))
+sns.heatmap(stress_df.corr(numeric_only=True), annot=True, fmt='.2f', cmap='coolwarm')
+plt.title('Heatmap - Stress_Dataset.csv')
+plt.tight_layout()
 plt.show()
