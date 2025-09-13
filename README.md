@@ -30,3 +30,5 @@ Stress negatively correlates with:
 Self-esteem (0.76) - Better self-esteem -> less stress
 Sleep quality (0.78) - Low stress -> Better Sleep or vice verca
 Academic performance (0.72) - Either poor academic performance causes stress or other way around
+
+![Divide Stress Groups into two and correlate with the previous higher correlations!](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Average_Factor_Levels_By_Stress_Group.png)
