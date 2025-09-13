@@ -65,12 +65,41 @@ Here we just take median and later split it to low stress (below median values) 
 '''
 median_stress = stress_level_df['stress_level'].median()
 
+
+
+'''
+Here we add a new column to the database (StressLevelDataset).
+Since we have a median, we can use the np.where function to differtiate the values
+e.g if stress value is 1,2,3 then it's low stress and we add True value to it in the column
+and if it is 4,5,6 then we add False since it is high stress.
+
+When we have only TRUE and FALSE values instead of numbers we can see how many TRUE
+values correlate with other attributes.
+
+
+	stress_level	stress_group
+0	1	Low Stress(True)
+1	2	High Stress(False)
+2	1	Low Stress(True)
+3	2	High Stress(False)
+'''
+
 stress_level_df['stress_group'] = np.where(stress_level_df['stress_level'] > median_stress, 
                                           'High Stress', 
                                           'Low Stress')
 
+'''
+This is just the attributes that were highly correlated from the heatmap
+'''
+
 factors_to_compare = ['sleep_quality', 'self_esteem', 'academic_performance', 'future_career_concerns']
 
+
+'''
+This just calculates the average value for each of those columns within each group."
+
+
+'''
 comparison_df = stress_level_df.groupby('stress_group')[factors_to_compare].mean().T
 print(comparison_df)
 
