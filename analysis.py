@@ -29,8 +29,8 @@ plt.show()
 '''
 This is for the Stress_DataSet.csv
 '''
-plt.figure(figsize=(12, 8))
-sns.heatmap(stress_df.corr(numeric_only=True), annot=True, fmt='.2f', cmap='coolwarm')
-plt.title('Heatmap - Stress_Dataset.csv')
-plt.tight_layout()
-plt.show()
+#plt.figure(figsize=(12, 8))
+#sns.heatmap(stress_df.corr(numeric_only=True), annot=True, fmt='.2f', cmap='coolwarm')
+#plt.title('Heatmap - Stress_Dataset.csv')
+#plt.tight_layout()
+#plt.show()
