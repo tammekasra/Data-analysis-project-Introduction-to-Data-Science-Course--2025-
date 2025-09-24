@@ -1,5 +1,7 @@
 # Data-analysis-project-Introduction-to-Data-Science-Course--2025-
 The idea behind the project is to explore possible available tools to measure and analize data associated with student overall mental health.
+We in this project want to know what affects stress the most - hence what a student should imrpove in order to have less stress in their lives and augment other fields in their daily lives.
+
 
 The data was taken from the following link that is is been data privacy proven and validated -
 https://www.kaggle.com/datasets/mdsultanulislamovi/student-stress-monitoring-datasets  
@@ -19,17 +21,15 @@ Heatmap is a useful tool in assessing correlations across all attributes within 
 
 ![Heatmap Visualization](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Heat_matp_visualization.png)
 
-From the heatmap we can clearly see that -
+## Correlation Coefficient analysis on Stress
 
-Stress correlates strongly with:
-Future career concerns are the #2 stress driver (0.74)
-Academic performance is the #3 protective factor (0.72)
-Study load has moderate impact (0.63) - Manageable but significant
+The problem with Heatmap is that with large number of attributes - it becomes "messy" and hard to "read" or "analyse". Thus we modify the heatmap such that the correlation cofficient are in order.
+We can pick the attributes that are correlated with stress and have these in an ascended order for easier representation.
 
-Stress negatively correlates with:
-Self-esteem (0.76) - Better self-esteem -> less stress
-Sleep quality (0.78) - Low stress -> Better Sleep or vice verca
-Academic performance (0.72) - Either poor academic performance causes stress or other way around
+![Correlation Cofficients - Stress vs Other Attributes](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Correlation_Coefficient.png)
+
+From the correlation coefficient data we can clearly see that the top attributes in increasing stress are in order - 1) Bullying, 2)Future Career Concerns, 3) Anxiety level and 4) Depression.
+The attributes that has that higher impact on stress are 1)Self-esteem, 2)Sleep Quality, 3)Academic Performance and 4)Safety.
 
 ## Grouping data to - highly stressed and low stressed
 
