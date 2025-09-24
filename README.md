@@ -40,6 +40,8 @@ stressed. We can see then which features actually influence stress.
 
 Here we can already clearly see that sel-esteem is the attribute that influences stress marginally compare to others attributes. 
 
+## Random Forest Classifier
+
 ![Random Forest Classification Analysis](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Random_Forest_Predictions.png)
 
 While correlation analysis is useful for identifying linear relationships, it does not capture complex, non-linear interactions between features. To better understand which factors contribute most to student stress, we used a Random Forest Classifier — a powerful machine learning algorithm based on an ensemble of decision trees.
