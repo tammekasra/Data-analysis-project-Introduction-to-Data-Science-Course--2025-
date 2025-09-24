@@ -45,21 +45,27 @@ Here we can already clearly see that sel-esteem is the attribute that influences
 ![Random Forest Classification Analysis](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Random_Forest_Predictions.png)
 
 While correlation analysis is useful for identifying linear relationships, it does not capture complex, non-linear interactions between features. To better understand which factors contribute most to student stress, we used a Random Forest Classifier — a powerful machine learning algorithm based on an ensemble of decision trees.
-
 Key points about Random Forest:
-
-It combines multiple decision trees to reduce overfitting and improve prediction accuracy.
-
-Each tree “votes” on the stress level, and the final prediction is determined by majority voting.
-
-Feature importance is computed based on how much each feature reduces the prediction error across all trees.
-
-Unlike correlation, this method can capture non-linear relationships and interactions between variables.
-
-From the Random Forest analysis, we observed that:
-
-Features such as blood pressure, sleep quality, and anxiety level appear as strong predictors of stress, even if they did not have the highest linear correlations.
+                       -It combines multiple decision trees to reduce overfitting and improve prediction accuracy.
+                       -Each tree “votes” on the stress level, and the final prediction is determined by majority voting.
+                       -Unlike correlation, this method can capture non-linear relationships and interactions between variables.
+                       -From the Random Forest analysis, we observed that:
+                       -Features such as blood pressure, sleep quality, and anxiety level appear as strong predictors of stress, even if they did not have the highest linear correlations.
 
 Self-esteem remains an important factor, but some health-related or lifestyle variables play a larger role when all variables are considered together.
 
-This demonstrates that machine learning models can provide complementary insights to classical statistical methods like correlation, especially when features interact in complex ways..
+## Random Forest confusiong matrix
+
+![Random Forest Confusion Matrix](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Random%20Forest%20Confusion%20Matrix.png)
+
+This extra analysis by classifixation matrix helps us to depict whether the model that we used - in this case Random Tree Forest - is good or not.
+
+Diagonal (green): Correct predictions
+-102 students with "No Stress" correctly identified
+-97 students with "Somewhat" stress correctly identified
+-98 students with "Very Stressed" correctly identified
+
+Off-diagonal (red): Misclassifications
+-Very few errors overall - excellent performance!
+
+
