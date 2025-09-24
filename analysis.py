@@ -190,8 +190,37 @@ plt.show()
 
 
 
+'''
+Plot 6 - this helps to group three stress levels within the Random Tree Forest
+'''
+
+#import shap
+
+#class_names = ['No Stress', 'Somewhat Stressed', 'Very Stressed']
+#explainer = shap.Explainer(clf, X, feature_names=X.columns)
+#shap_values = explainer(X)
+#shap.summary_plot(shap_values, X, plot_type="bar", class_names=class_names)
+#shap.summary_plot(shap_values, X, class_names=class_names)
 
 
+'''
+
+Model evluation
+'''
+
+from sklearn.metrics import classification_report, confusion_matrix
+
+y_pred = clf.predict(X_test)
+print(classification_report(y_test, y_pred))
+
+cm = confusion_matrix(y_test, y_pred)
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+            xticklabels=['No Stress','Somewhat','Very Stressed'],
+            yticklabels=['No Stress','Somewhat','Very Stressed'])
+plt.title('Random Forest Confusion Matrix')
+plt.xlabel('Predicted')
+plt.ylabel('True')
+plt.show()
 
 
 
