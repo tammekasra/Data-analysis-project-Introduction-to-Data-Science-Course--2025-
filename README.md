@@ -29,7 +29,7 @@ We can pick the attributes that are correlated with stress and have these in an 
 ![Correlation Cofficients - Stress vs Other Attributes](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Correlation_Coefficient.png)
 
 From the correlation coefficient data we can clearly see that the top attributes in increasing stress are in order - 1) Bullying, 2)Future Career Concerns, 3) Anxiety level and 4) Depression.
-The attributes that has that higher impact on stress are 1)Self-esteem, 2)Sleep Quality, 3)Academic Performance and 4)Safety.
+The attributes that has that higher impact on lowering stress are 1)Self-esteem, 2)Sleep Quality, 3)Academic Performance and 4)Safety.
 
 ## Grouping data to - highly stressed and low stressed
 
