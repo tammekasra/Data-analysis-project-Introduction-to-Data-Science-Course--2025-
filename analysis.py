@@ -13,12 +13,20 @@ stress_df = pd.read_csv('Stress_Dataset.csv')
 stress_level_df = pd.read_csv('StressLevelDataset.csv')
 
 
+'''
+These below just check if we have any missing data
+'''
+print(stress_df.isnull().sum())
+print(stress_level_df.isnull().sum())
 
 '''
-This just does the StressLevelDataset.csv
+This just uploads the StressLevelDataset.csv
 
 '''
 
+'''
+Figure 1 - heatmap
+'''
 
 plt.figure(figsize=(12, 8))
 sns.heatmap(stress_level_df.corr(), annot=True, cmap='coolwarm')
@@ -30,6 +38,7 @@ plt.show()
 
 '''
 This makes the heatmap look prettier
+(figure 2.)
 '''
 stress_corr = stress_level_df.corr()['stress_level']
 stress_corr_sorted = stress_corr.sort_values(ascending=False)
@@ -62,6 +71,11 @@ if there are any signficant changes.
 
 '''
 Here we just take median and later split it to low stress (below median values) and high stress
+'''
+
+
+'''
+Figure 3 - Median of for stress levels
 '''
 median_stress = stress_level_df['stress_level'].median()
 
@@ -110,6 +124,69 @@ plt.ylabel('Average Score')
 plt.legend(title='Stress Group')
 plt.show()
 
+
+'''
+Picture 4 - Here we make a scatter plot. We add self-esteem and sleep-quality together
+and future career concerns and anxiety levels.
+
+This allows us to see if two attributes combined will show any meaningful representation.
+'''
+
+stress_level_df['protection_score'] = stress_level_df['self_esteem'] + stress_level_df['sleep_quality']
+stress_level_df['risk_score'] = stress_level_df['future_career_concerns'] + stress_level_df['anxiety_level']
+
+
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='risk_score', y='protection_score', hue='stress_group', 
+                data=stress_level_df, alpha=0.7)
+plt.title('Self-esteem and Sleep Quality  vs  Future Career Concerns and Anxiety')
+plt.xlabel('Anxiety + Career Concerns')
+plt.ylabel('Self-esteem +sleep')
+plt.show()
+
+
+
+
+
+'''
+Plot 5 - RandomTreeForest Classifier - it predicts which features affect stress the most via
+
+Measures how much each feature reduces impurity (or improves predictions) across all trees.
+
+It considers interactions between variables and non-linear relationships.
+
+A feature that is weakly correlated linearly with stress might still be very useful for prediction
+in combination with other features.
+'''
+
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+
+
+features = ['anxiety_level','self_esteem','mental_health_history',
+            'depression','headache','blood_pressure','sleep_quality',
+            'breathing_problem','noise_level','living_conditions',
+            'safety','basic_needs','academic_performance','study_load',
+            'teacher_student_relationship','future_career_concerns','social_support'
+            ,'peer_pressure','extracurricular_activities','bullying'
+]
+
+
+X = stress_level_df[features]
+y = stress_level_df['stress_level']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+clf = RandomForestClassifier()
+clf.fit(X_train, y_train)
+
+importances = pd.Series(clf.feature_importances_, index=features)
+importances.sort_values().plot(kind='barh', figsize=(12, 12), color='skyblue')
+plt.title('Random Forest Feature Importance for Stress Levels', fontsize=16)
+plt.xlabel('Importance Score', fontsize=14)
+plt.ylabel('Features', fontsize=14)
+plt.tight_layout()
+plt.show()
 
 
 
