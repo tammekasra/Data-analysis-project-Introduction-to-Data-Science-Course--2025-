@@ -226,3 +226,48 @@ plt.show()
 
 
 
+
+
+
+
+
+
+import math
+
+numeric_features = ['sleep_quality', 'self_esteem', 'academic_performance',
+                    'future_career_concerns', 'anxiety_level', 'depression']
+
+plt.figure(figsize=(14, 10))
+for i, col in enumerate(numeric_features):
+    plt.subplot(3, 3, i+1)
+    sns.histplot(stress_level_df[col], kde=True, bins=20, color='skyblue')
+    plt.title(f'{col} Distribution')
+plt.tight_layout()
+plt.show()
+
+
+
+
+num_plots = len(numeric_features)
+cols = 1  # Only 1 column for more vertical space
+rows = num_plots
+
+plt.figure(figsize=(10, 6*rows))  
+
+for i, col in enumerate(numeric_features):
+    plt.subplot(rows, cols, i+1)
+    sns.kdeplot(
+        data=stress_level_df, 
+        x=col, 
+        hue='stress_group', 
+        fill=True, 
+        common_norm=False, 
+        alpha=0.5
+    )
+    plt.title(f'{col} by Stress Group')
+
+plt.tight_layout()
+plt.show()
+
+
+
