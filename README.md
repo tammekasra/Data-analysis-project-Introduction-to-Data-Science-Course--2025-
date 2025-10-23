@@ -7,13 +7,13 @@ Our hypothesis for this project is that there are clear correlations in the data
 
 
 ## 2. Materials and methods
-###2.1.	Stress monitoring dataset
+### 2.1.	Stress monitoring dataset
 The dataset is designed to collect information about stress, general well-being, and stress indicators in students' lives. It uses a 0-5 Likert scale in all its answers, ensuring the scale is uniform. The query consists of 23 questions and includes 843 answers from college students aged 18-21. The dataset is also anonymized and otherwise preprocessed. This also means that there are no ethical concerns relating to the use of the dataset.
 
-###2.2.	Correlation function
+### 2.2.	Correlation function
 The correlation function used in this project was the basic corr-function from the pandas Python package. This was done by using the Pearson correlation coefficient.  The function calculates the linear correlation between two sets of data. It gives a number between -1 and 1 as its answer, which is the ratio that defines how much the two datasets in question correlate with each other. with -1 having the opposite correlation with each other, and 1 having a straightforward correlation. This method cannot detect other correlations that are not linear, but for the purposes of this project, this method suffices
 
-###2.3.	 Random forest
+### 2.3.	 Random forest
 The machine learning model we decided to try was a random forest method. This method works by creating decision trees during the model's training and then outputting the average of the predicted trees, creating a linear regression model. This method considers the whole dataset when doing the correlation analysis, and it can account for non-linear correlations.
 
 ## Heatmap Visualization
