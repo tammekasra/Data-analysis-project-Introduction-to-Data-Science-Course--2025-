@@ -1,10 +1,9 @@
 # Data-analysis-project-Introduction-to-Data-Science-Course--2025-
-The idea behind the project is to explore possible available tools to measure and analize data associated with student overall mental health.
-We in this project want to know what affects stress the most - hence what a student should imrpove in order to have less stress in their lives and augment other fields in their daily lives.
+## 1.Introduction
+Analyzing the connections of different factors in large datasets by hand is tedious. For this reason, honing and testing various methods to trace these connections for any dataset helps make this problem more manageable. In this project, we aim to determine practical solutions for tackling this problem by using a query dataset on factors that cause student stress from Kaggle (https://www.kaggle.com/datasets/mdsultanulislamovi/student-stress-monitoring-datasets).  The stress dataset was ideal for this because many aspects of our well-being correlate with the quality of stress we experience, aiding in the study of these correlations.
 
-
-The data was taken from the following link that is is been data privacy proven and validated -
-https://www.kaggle.com/datasets/mdsultanulislamovi/student-stress-monitoring-datasets  
+The solutions we are trying here include simpler correlation functions and predictive machine learning modeling. These methods were selected for assessment in this project because they are the most straightforward solutions to our problem. We observed that the strength of the correlation functions lies in their ability to more accurately evaluate two parts of the dataset, while predictive machine learning modeling is more helpful in providing a broader view of the entire dataset.
+Our hypothesis for this project is that there are clear correlations in the dataset, which can be detected and assessed by our approaches to the scientific problem described here. Additionally, we believe that the results provide insight into the effectiveness of these methods, helping us evaluate them as potential solutions to similar issues.
 
 
 
