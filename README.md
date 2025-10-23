@@ -16,7 +16,8 @@ The correlation function used in this project was the basic corr-function from t
 ### 2.3.	 Random forest
 The machine learning model we decided to try was a random forest method. This method works by creating decision trees during the model's training and then outputting the average of the predicted trees, creating a linear regression model. This method considers the whole dataset when doing the correlation analysis, and it can account for non-linear correlations.
 
-## Heatmap Visualization
+## 3. Results
+### 3.1. Correlation function
 
 Heatmap is a useful tool in assessing correlations across all attributes within a data set for fast and reliable correlations.
 -Red shows strong correlation - if a value increases, so does another attributes values
@@ -29,8 +30,6 @@ Heatmap is a useful tool in assessing correlations across all attributes within 
 
 ![Heatmap Visualization](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Heat_matp_visualization.png)
 
-## Correlation Coefficient analysis on Stress
-
 The problem with Heatmap is that with large number of attributes - it becomes "messy" and hard to "read" or "analyse". Thus we modify the heatmap such that the correlation cofficient are in order.
 We can pick the attributes that are correlated with stress and have these in an ascended order for easier representation.
 
@@ -39,8 +38,6 @@ We can pick the attributes that are correlated with stress and have these in an 
 From the correlation coefficient data we can clearly see that the top attributes in increasing stress are in order - 1) Bullying, 2)Future Career Concerns, 3) Anxiety level and 4) Depression.
 The attributes that has that higher impact on lowering stress are 1)Self-esteem, 2)Sleep Quality, 3)Academic Performance and 4)Safety.
 
-## Grouping data to - highly stressed and low stressed
-
 Since we previously saw which features highly and lowly correlate with overall-stress - it can be also plausible to divide stress groups into two. Below the median is low stressed and up-ward median is highly 
 stressed. We can see then which features actually influence stress.
 
@@ -48,7 +45,7 @@ stressed. We can see then which features actually influence stress.
 
 Here we can already clearly see that sel-esteem is the attribute that influences stress marginally compare to others attributes. 
 
-## Random Forest Classifier
+### 3.2. Random Forest Classifier
 
 ![Random Forest Classification Analysis](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Random_Forest_Predictions.png)
 
@@ -62,8 +59,6 @@ Key points about Random Forest:
 
 Self-esteem remains an important factor, but some health-related or lifestyle variables play a larger role when all variables are considered together.
 
-## Random Forest confusiong matrix
-
 ![Random Forest Confusion Matrix](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Random%20Forest%20Confusion%20Matrix.png)
 
 This extra analysis by classifixation matrix helps us to depict whether the model that we used - in this case Random Tree Forest - is good or not.
@@ -75,5 +70,7 @@ Diagonal (green): Correct predictions
 
 Off-diagonal (red): Misclassifications
 -Very few errors overall - excellent performance!
+## Discussion
 
+## Conclusions
 
