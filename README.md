@@ -44,8 +44,9 @@ _Figure 3. dataset divided to high and low stress_
 ### 3.2. Random Forest Classifier
 
 ![Random Forest Classification Analysis](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Random_Forest_Predictions.png)
+_Figure 4. Random forest predictive model_
 
-While correlation analysis is useful for identifying linear relationships, it does not capture complex, non-linear interactions between features. To better understand which factors contribute most to student stress, we used a Random Forest Classifier — a powerful machine learning algorithm based on an ensemble of decision trees.
+While correlation analysis is useful for identifying linear relationships, it does not capture complex, non-linear interactions between features. To better understand which factors contribute most to student stress, we used a Random Forest Classifier a machine learning algorithm based on an ensemble of decision trees.
 Key points about Random Forest:
                        -It combines multiple decision trees to reduce overfitting and improve prediction accuracy.
                        -Each tree “votes” on the stress level, and the final prediction is determined by majority voting.
@@ -53,11 +54,12 @@ Key points about Random Forest:
                        -From the Random Forest analysis, we observed that:
                        -Features such as blood pressure, sleep quality, and anxiety level appear as strong predictors of stress, even if they did not have the highest linear correlations.
 
-Self-esteem remains an important factor, but some health-related or lifestyle variables play a larger role when all variables are considered together.
+Self-esteem remains an important factor, but some health-related or lifestyle variables play a larger role when all variables are considered together (Figure 4.).
 
 ![Random Forest Confusion Matrix](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Random%20Forest%20Confusion%20Matrix.png)
+_Figure 5. Random forest classification matrix_
 
-This extra analysis by classifixation matrix helps us to depict whether the model that we used - in this case Random Tree Forest - is good or not.
+This extra analysis by classification matrix (Figure 5.) helps us to depict whether the model that we used - in this case Random Tree Forest - is good or not.
 
 Diagonal (green): Correct predictions
 -102 students with "No Stress" correctly identified
