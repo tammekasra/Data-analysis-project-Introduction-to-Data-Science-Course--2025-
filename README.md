@@ -77,4 +77,4 @@ While we mainly used pretty much only the already pre-processed data, we also wa
 
 _Figure X. Heatmap with bottom 40 % of values in y-axis. White pots are empty
 ## Conclusions
-
+In general, we used the correlation function and machine learning methods to find differing amounts of correlations in the dataset. The models were clear and results they gave sensible. Correlation function was useful in finding connections on a smaller scale, while the predictive machine learning models were helpful in covering the weaknesses of the more simple function. We found that these are helpful tools in detecting correlations in large datasets, but the usage should be evaluated in case-by-case basis.
