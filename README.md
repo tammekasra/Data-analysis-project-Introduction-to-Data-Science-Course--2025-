@@ -59,7 +59,7 @@ Self-esteem remains an important factor, but some health-related or lifestyle va
 ![Random Forest Confusion Matrix](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Random%20Forest%20Confusion%20Matrix.png)
 _Figure 5. Random forest classification matrix_
 
-This extra analysis by classification matrix (Figure 5.) helps us to depict whether the model that we used - in this case Random Tree Forest - is good or not.
+This extra analysis by classification matrix (Figure 5.) helps us to depict whether the model that we used, in this case Random Tree Forest, is good or not.
 
 Diagonal (green): Correct predictions
 -102 students with "No Stress" correctly identified
@@ -67,7 +67,8 @@ Diagonal (green): Correct predictions
 -98 students with "Very Stressed" correctly identified
 
 Off-diagonal (red): Misclassifications
--Very few errors overall - excellent performance!
+
+Very few errors overall, meaning that the results given by the model should be reliable.
 ## Discussion
 
 ## Conclusions
