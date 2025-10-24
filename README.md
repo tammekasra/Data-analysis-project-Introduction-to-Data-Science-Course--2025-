@@ -34,12 +34,12 @@ _Figure 2. Coefficients in order as a function of stress_
 From the correlation coefficient data we can clearly see that the top attributes in increasing stress are in order - 1) Bullying, 2)Future Career Concerns, 3) Anxiety level and 4) Depression.
 The attributes that has that higher impact on lowering stress are 1)Self-esteem, 2)Sleep Quality, 3)Academic Performance and 4)Safety.
 
-Since we previously saw which features highly and lowly correlate with overall-stress - it can be also plausible to divide stress groups into two. Below the median is low stressed and up-ward median is highly 
-stressed. We can see then which features actually influence stress.
+Since we previously saw which features highly and lowly correlate with overall-stress - it can be also plausible to divide stress groups into two (Figure 3.). Below the median is low stressed and up-ward median is highly 
+stressed. We can see then which features actually influence stress. We can see that the self-esteem is the most significant attribute that influences stress marginally higher compared to other attributes.
 
 ![Divide Stress Groups into two and correlate with the previous higher correlations!](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Average_Factor_Levels_By_Stress_Group.png)
+_Figure 3. dataset divided to high and low stress_
 
-Here we can already clearly see that sel-esteem is the attribute that influences stress marginally compare to others attributes. 
 
 ### 3.2. Random Forest Classifier
 
