@@ -19,21 +19,17 @@ The machine learning model we decided to try was a random forest method. This me
 ## 3. Results
 ### 3.1. Correlation function
 
-Heatmap is a useful tool in assessing correlations across all attributes within a data set for fast and reliable correlations.
--Red shows strong correlation - if a value increases, so does another attributes values
--Blue shows negative correlation - if a value increase, another attribute value will decrease, and vice versa
--White shows no correlation - meaning there is no findable correlation.
-
-(Heatmap uses Pearson correlation coefficient, which measures linear relationships between - measures linear relationship with oneanother - covariance between variables X and Y is divided by standard deviations of X and Y)
-
-! NB - Even if there is or not a correlation within shown graph - it does not necessarily mean there is "nothing" to be found - since it ONLY looks at linear relationships only.
+A heatmap (Figure 1) is a valuable tool for assessing correlations across all attributes in a dataset, providing fast, reliable results. high values close to 1 are marked red and they show strong correlation so in this case if a value increases, so does another attribute's value. Low values close to -1 are marked blue shows negative correlation, meaning if a value increases, another attribute's value will decrease, and vice versa. White shows no correlation. 
+Even if there is or is not a correlation within the graph shown, it does not necessarily mean there is nothing to be found, since it only looks at linear relationships. These other type of connections are tried to find with other methods, since this is a limitation with the correlation function.
 
 ![Heatmap Visualization](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Heat_matp_visualization.png)
+_Figure 1. Heatmap of the stress level dataset_
 
-The problem with Heatmap is that with large number of attributes - it becomes "messy" and hard to "read" or "analyse". Thus we modify the heatmap such that the correlation cofficient are in order.
-We can pick the attributes that are correlated with stress and have these in an ascended order for easier representation.
+The problem with Heatmap is that with large number of attributes it becomes messy and hard to read and/or analyze. Thus we can modify the heatmap such that the correlation cofficient are in order.
+We can pick the attributes that are correlated with stress and have these in an ascended order for easier representation (Figure 2). We were most interested in the correlations with general stress level so we decided to use it as the point that we can correlate the other coefficients on.
 
 ![Correlation Cofficients - Stress vs Other Attributes](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Correlation_Coefficient.png)
+_Figure 2. Coefficients in order as a function of stress_
 
 From the correlation coefficient data we can clearly see that the top attributes in increasing stress are in order - 1) Bullying, 2)Future Career Concerns, 3) Anxiety level and 4) Depression.
 The attributes that has that higher impact on lowering stress are 1)Self-esteem, 2)Sleep Quality, 3)Academic Performance and 4)Safety.
