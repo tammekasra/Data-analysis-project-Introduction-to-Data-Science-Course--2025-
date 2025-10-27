@@ -271,3 +271,54 @@ plt.show()
 
 
 
+
+
+'''
+PCA
+
+'''
+
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
+
+# Features for PCA (numeric only)
+numeric_features = ['anxiety_level','self_esteem','mental_health_history',
+                    'depression','headache','blood_pressure','sleep_quality',
+                    'breathing_problem','noise_level','living_conditions',
+                    'safety','basic_needs','academic_performance','study_load',
+                    'teacher_student_relationship','future_career_concerns',
+                    'social_support','peer_pressure','extracurricular_activities','bullying']
+
+# Standardize features
+X_scaled = StandardScaler().fit_transform(stress_level_df[numeric_features])
+
+# PCA - reduce to 2 components for visualization
+pca = PCA(n_components=2)
+pca_result = pca.fit_transform(X_scaled)
+
+# Add PCA results to dataframe
+stress_level_df['PCA1'] = pca_result[:,0]
+stress_level_df['PCA2'] = pca_result[:,1]
+
+# Explained variance
+print("Explained variance ratio:", pca.explained_variance_ratio_)
+
+# Biplot
+plt.figure(figsize=(12,8))
+sns.scatterplot(x='PCA1', y='PCA2', hue='stress_group', data=stress_level_df, alpha=0.7)
+
+# Draw vectors for original features
+for i, feature in enumerate(numeric_features):
+    plt.arrow(0, 0, pca.components_[0,i]*5, pca.components_[1,i]*5, 
+              color='r', alpha=0.5, head_width=0.1)
+    plt.text(pca.components_[0,i]*5.2, pca.components_[1,i]*5.2, feature, color='black', fontsize=9)
+
+plt.title('PCA Biplot of Stress Dataset')
+plt.xlabel('PCA1')
+plt.ylabel('PCA2')
+plt.grid()
+plt.show()
+
+
+
+
