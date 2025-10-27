@@ -16,6 +16,10 @@ The correlation function used in this project was the basic corr-function from t
 ### 2.3.	 Random forest
 The machine learning model we decided to try was a random forest method. This method works by creating decision trees during the model's training and then outputting the average of the predicted trees, creating a linear regression model. This method considers the whole dataset when doing the correlation analysis, and it can account for non-linear correlations.
 
+### 2.4. PCA analysis
+
+Principal Component Analysis (PCA) is a technique used to reduce the complexity of large datasets while preserving most of their important information. It works by transforming correlated variables into a smaller set of uncorrelated components -  principal components. These components capture the directions of greatest variation in the data, allowing patterns and relationships to be visualized more easily. In this way, PCA helps to identify which variables contribute most to the overall differences within the dataset. 
+
 ## 3. Results
 ### 3.1. Correlation function
 
@@ -69,7 +73,21 @@ Diagonal (green): Correct predictions
 Off-diagonal (red): Misclassifications
 
 Very few errors overall, meaning that the results given by the model should be reliable.
+
+## PCA Analysis 
+
+![PCA Analysis](https://github.com/tammekasra/Data-analysis-project-Introduction-to-Data-Science-Course--2025-/blob/main/Screenshot%202025-10-27%20142210.png)
+_Figure 6. PCA Analysis_
+
+Principal Component Analysis (PCA) was used to simplify the dataset and see if the main patterns in the data could explain differences in stress levels. In the PCA biplot, each point represents a student, and the colors show whether they belong to the low or high stress group. The first principal component (PCA1) already separates the two groups quite clearly, which means that the main variation in the data is strongly linked to overall stress level.
+
+The red arrows in the plot show how each variable contributes to the separation. Factors like anxiety level, depression, blood pressure, and bullying point toward the high stress side, meaning they increase as stress increases. On the other hand, self-esteem, sleep quality, and social support point in the opposite direction, toward the low stress side, which suggests these are protective factors that help reduce stress. The longer the arrow, the stronger that factor’s influence on the overall pattern.
+
+This analysis supports the previous correlation and Random Forest results, confirming that both psychological and lifestyle factors contribute significantly to student stress. PCA makes these relationships easier to see by summarizing all the variables into just two main components that explain most of the variation in the data
+
 ## Discussion
+
+
 
 Dataset shows us differing amounts of correlation between each part of it which was what we expected. This also means that we are at least to a context quantifying the correlation. The correlation responses of each method used here look quite straightforward and corroborate each other to a certain extent. The differences in methods result were expected, and in this case support the hypothesis. This is of course due the fact that different methods have different strengths and their usage should be evaluated before using them depending on the need of the user.
 While we mainly used pretty much only the already pre-processed data, we also wanted to try selectively choosing values. The idea behind this was if something is correlating only negatively/positively and the inverse situation would not have change with the data it would distort the Pearson coefficient being closer to the zero than in actual case. To test a way around this we tried to selectively choose the higher and lower values separately and make heatmaps of both with the correlation function. This did not end up producing anything of use, since the dataset was a little too small making a lot of NaNs in process. Additionally, inconsistent scales made finding sensible results impossible. End product ended up being a partial heatmap that is not reliable (Figure X)
